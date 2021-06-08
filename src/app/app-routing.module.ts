@@ -41,7 +41,7 @@ const routes: Routes = [
   {path: "books/update/:bookId", component: BookUpdateComponent},
   {path: "categories/update/:categoryId", component: CategoryUpdateComponent},
   {path: "authors/update/:authorId", component: AuthorUpdateComponent},
-  {path: "publishers/update/:publisherId", component: PublisherUpdateComponent},
+  {path: "publishers/update/:publisherId", component: PublisherUpdateComponent},   
   
   {path: "login", component:LoginComponent},
   {path: "register", component:RegisterComponent},
