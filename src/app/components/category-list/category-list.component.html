@@ -1,0 +1,31 @@
+<div class="row">
+  
+    <div class="col-md-12">
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Kategori Id</th>
+            <th scope="col">Kategori Adı</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories">
+            <td>{{category.categoryId}}</td>
+            <td>{{category.categoryName}}</td>
+            <td><button routerLink="/categories/update/{{category.categoryId}}" class="btn btn-warning" style="border-radius: 50px;">Güncelle</button></td>
+            <td><button (click)="deleteCategory(category)" class="btn btn-danger" style="border-radius: 50px;">Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+  
+    <div class="col-md-12" style="text-align:right">
+  
+      <button routerLink="/categories/add" class="btn btn-success" style="border-radius: 50px; width: 150px;">Kategori Ekle</button>
+  
+    </div>
+  
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="col-md-12">
+    <div class="card">
+  
+      <div class="card-header">
+        <h5 class="card-title text-center">Yazar Ekle</h5>
+      </div>
+  
+      <div class="card-body">
+  
+        <form [formGroup]="authorAddForm">
+  
+          <div class="mb-3 row">
+            <label for="authorName" class="col-sm-2 col-form-label">Yazar Adı:</label>
+            <div class="col-sm-10">
+              <input type="text" id="authorName" formControlName="authorName" class="form-control"/>
+            </div>
+          </div>
+  
+        </form>
+  
+      </div>
+
+    <div class="card-footer d-flex justify-content-end">
+      <button class="btn btn-fill btn-warning btn-lg" (click)="addAuthor()" >
+          Ekle
+      </button>
+    </div>
+  
+    </div>
+  </div>

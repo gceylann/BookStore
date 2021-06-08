@@ -1,0 +1,30 @@
+<div class="content rounded-0 mt-4">
+  <div class="col-md-12">
+      <div class="brand">
+          <div class="card-header"><h5 class="title">Yazarı Güncelle</h5></div>
+          <div class="card-body">
+              <form [formGroup]="authorUpdateForm">
+
+                <div class="mb-3">
+                  <label for="authorId">Yazar:</label>
+                  <select id="authorId" formControlName="authorId" class="form-select" aria-label="Yazar">
+                      <option *ngFor="let author of authors" [ngValue]="author.authorId">{{author.authorName}}</option>
+                  </select>
+                </div>
+
+                    <div class="mb-3">
+                        <label for="authorName">Yazar Adı:</label>
+                        <input type="text" id="authorName" formControlName="authorName" class="form-control" aria-label="Yazar:"/>
+                    </div>
+
+                      <div class="card-footer d-flex justify-content-end">
+                          <button class="btn btn-fill btn-warning btn-lg" (click)="updateAuthor()">
+                              Güncelle
+                          </button>
+                      </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+

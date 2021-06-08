@@ -1,0 +1,26 @@
+<main class="form-register text-center">
+    <form [formGroup]="registerForm">
+      <h1 class="h3 mb-3 fw-normal">Kayıt Ol</h1>
+  
+      <div class="form-group">
+        <input class="form-control" formControlName="firstName" type="firstName" id="firstName" placeholder="Adınız"/>
+      </div>
+  
+      <div class="form-group">
+        <input class="form-control" formControlName="lastName" type="lastName" id="lastName" placeholder="Soyadınız"/>
+      </div>
+  
+      <div class="form-group">
+        <input class="form-control" formControlName="email" type="email" id="email" placeholder="E-posta"/>
+      </div>
+  
+      <div class="form-group">
+        <input class="form-control" formControlName="password" type="password" id="password" placeholder="Şifre"/>
+      </div>
+  
+      <button class="w-100 btn btn-success" (click)="register()">
+        Kayıt Ol
+      </button>
+  
+    </form>
+  </main>

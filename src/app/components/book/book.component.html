@@ -1,0 +1,45 @@
+<div class="rounded-0 mt-2">
+  <div class="row">
+
+
+  <div class="mb-3 mt-2 px-1" style="width: 68rem;">
+    <input type="text" class="form-control" id="filterText" placeholder="Kitap Adı Giriniz" [(ngModel)]="filterText">
+    <small class="form-text text-muted" *ngIf="filterText">{{ filterText }} </small>
+  </div>
+
+  <div class="mb-3" style="width: 68rem;">
+    <app-book-filter></app-book-filter>
+  </div>
+
+  <div class="album py-3 px-0" style="width: 68rem;">
+    <div class="row">
+
+      <div class="card mx-3 p-3 mb-4 box-shadow" *ngFor="let bookDetail of bookDetails | filterPipe : filterText" style="width: 21rem">
+        <img src="https://localhost:44337/{{ bookDetail.imagePath }}" class="card-img-top" alt="..." width="500"
+          height="300" />
+        <div class="card-body">
+          <h5 class="card-title">{{ bookDetail.bookName }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Yazar: {{ bookDetail.authorName }}</li>
+          <li class="list-group-item">Fiyat: {{ bookDetail.price | currency:"₺"}}</li>
+        </ul>
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary" routerLink="/books/bookdetail/{{ bookDetail.bookId}}">
+              Detaylar
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addToCart(bookDetail)">
+              Sepete Ekle
+            </button>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+

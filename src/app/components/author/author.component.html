@@ -1,0 +1,20 @@
+<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+    <div class="rounded-0 mt-4" style="width: 170px;">
+      <ul class="list-group">
+        <li class="list-group-item sidebar-title bg-dark h5">Yazarlar</li>
+        <div style="width: 170px;">
+        <li
+          (click)="setCurrentAuthor(author)"
+          routerLink="books/author/{{author.authorId}}"
+          *ngFor="let author of authors"
+          [class]="getCurrentAuthorClass(author)">
+          {{ author.authorName }}
+        </li>
+      </div>
+      </ul>
+    
+    </div>
+    </div>
+
+    

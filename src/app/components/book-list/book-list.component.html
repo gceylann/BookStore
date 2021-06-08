@@ -1,0 +1,41 @@
+<div class="row">
+  
+  <div class="col-md-12">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Kitap Adı</th>
+          <th scope="col">Kategori </th>
+          <th scope="col">Yazar </th>
+          <th scope="col">Yayınevi</th>
+          <th scope="col">Sayfa</th>
+          <th scope="col">Fiyat</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{book.bookName}}</td>
+          <td>{{book.categoryName}}</td>
+          <td>{{book.authorName}}</td>
+          <td>{{book.publisherName}}</td>
+          <td>{{book.page}}</td>
+          <td>{{book.price}}</td>
+          <td><button routerLink="/books/update/{{book.bookId}}" class="btn btn-warning" style="border-radius: 50px;">Güncelle</button></td>
+          <td><button (click)="deleteBook(book)" class="btn btn-danger" style="border-radius: 50px;">Sil</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  <div class="col-md-12" style="text-align:right">
+
+    <button routerLink="/books/add" class="btn btn-success" style="border-radius: 50px; width: 150px;">Kitap Ekle</button>
+
+  </div>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,64 @@
+<div class="col-md-12">
+    <div class="card">
+  
+      <div class="card-header">
+        <h5 class="card-title text-center">Kitap Ekle</h5>
+      </div>
+  
+      <div class="card-body">
+
+        <form [formGroup]="bookAddForm">
+
+            <div class="mb-3">
+                <label for="categoryId">Kategori:</label>
+                <select id="categoryId" formControlName="categoryId" class="form-select" aria-label="Yazar">
+                    <option *ngFor="let category of categories" [ngValue]="category.categoryId">{{category.categoryName}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="authorId">Yazar:</label>
+                <select id="authorId" formControlName="authorId" class="form-select" aria-label="Yazar">
+                    <option *ngFor="let author of authors" [ngValue]="author.authorId">{{author.authorName}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="publisherId">Yayınevi:</label>
+                <select id="publisherId" formControlName="publisherId" class="form-select" aria-label="Yazar">
+                    <option *ngFor="let publisher of publishers" [ngValue]="publisher.publisherId">{{publisher.publisherName}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="bookName">Kitap Adı:</label>
+                <input type="text" id="bookName" formControlName="bookName" class="form-control" aria-label="Kitap:"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="page">Sayfa:</label>
+                <input type="number" id="page" formControlName="page" class="form-control" aria-label="Sayfa:"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="price">Fiyat:</label> 
+                    <input type="number" id="price" formControlName="price" class="form-control" aria-label="Fiyat:"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="description">Açıklama:</label>    
+                    <input type="text" id="description" formControlName="description" class="form-control" aria-label="Açıklama:"/>
+            </div>
+
+            <div class="card-footer d-flex justify-content-end">
+                <button class="btn btn-fill btn-warning btn-lg" (click)="addBook()">
+                    Ekle
+                </button>
+            </div>
+
+        </form>
+  
+      </div>
+  
+    </div>
+  </div>

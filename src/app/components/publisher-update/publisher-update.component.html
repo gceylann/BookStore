@@ -1,0 +1,30 @@
+<div class="content rounded-0 mt-4">
+  <div class="col-md-12">
+      <div class="brand">
+          <div class="card-header"><h5 class="title">Yayınevini Güncelle</h5></div>
+          <div class="card-body">
+              <form [formGroup]="publisherUpdateForm">
+
+                <div class="mb-3">
+                  <label for="publisherId">Yayınevi:</label>
+                  <select id="publisherId" formControlName="publisherId" class="form-select" aria-label="Yayınevi">
+                      <option *ngFor="let publisher of publishers" [ngValue]="publisher.publisherId">{{publisher.publisherName}}</option>
+                  </select>
+                </div>
+
+                    <div class="mb-3">
+                        <label for="publisherName">Yayınevi Adı:</label>
+                        <input type="text" id="publisherName" formControlName="publisherName" class="form-control" aria-label="Yayınevi:"/>
+                    </div>
+
+                      <div class="card-footer d-flex justify-content-end">
+                          <button class="btn btn-fill btn-warning btn-lg" (click)="updatePublisher()">
+                              Güncelle
+                          </button>
+                      </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+

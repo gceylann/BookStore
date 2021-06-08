@@ -1,0 +1,28 @@
+
+<div class="row">
+
+    <h1 class="h3 mb-3 fw-normal text-center">Sepetiniz</h1>
+  
+    <div class="col-md-12">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Kitap Adı</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">Adet</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartItem of cartItems">
+            <td>{{cartItem.book.bookName}}</td>
+            <td>{{cartItem.book.price | currency: "₺"}}</td>
+            <td>{{cartItem.quantity}}</td>
+            <td><button (click)="removeFromCart(cartItem.book)" class="btn btn-danger" style="border-radius: 50px;">Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div class="content rounded-0 mt-4">
+    <div class="col-md-12">
+        <div class="brand">
+            <div class="card-header"><h5 class="title">Kullanıcı Bilgilerini Güncelle</h5></div>
+            <div class="card-body">
+                <form [formGroup]="userInfosUpdateForm">
+  
+                    <div class="mb-3">
+                        <label for="firstName">Ad:</label>
+                        <input type="text" id="firstName" [ngModel]="user.firstName" formControlName="firstName" class="form-control" aria-label="Ad:"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastName">Soyad:</label>
+                        <input type="text" id="lastName" [ngModel]="user.lastName" formControlName="lastName" class="form-control" aria-label="Soyad:"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" [ngModel]="user.email" formControlName="email" class="form-control" aria-label="email:"/>
+                    </div>
+  
+                        <div class="card-footer d-flex justify-content-end">
+                            <button class="btn btn-fill btn-warning btn-lg" (click)="updateUserInfos()">
+                                Güncelle
+                            </button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>

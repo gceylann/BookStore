@@ -1,0 +1,58 @@
+<div class="container rounded-0 mt-4">
+  <div class="card">
+    <div class="card-top border-bottom text-center">
+      <h5 class="card-title text-center">Ödeme Sayfası</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="left border">
+            <div class="row">
+              <div class="icons">
+                <img src="https://img.icons8.com/color/48/000000/visa.png" />
+                <img
+                  src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+                />
+                <img src="https://img.icons8.com/color/48/000000/maestro.png" />
+              </div>
+            </div>
+            <form [formGroup]="paymentAddForm">
+              <span>Kart Üzerindeki İsim:</span>
+              <input type="text" id="nameSurname" formControlName="nameSurname" class="form-control" placeholder="Ad Soyad" required/>
+              <span>Kart Numarası:</span>
+              <input type="text" id="creditCardNumber" formControlName="creditCardNumber" class="form-control" placeholder="0000 0000 0000 0000" pattern="(?=.*[0-9]).{8,}"  />
+              <div class="row">
+                <div class="col-8">
+                  <span>Son Kullanma Tarihi:</span> 
+                  <input type="date" id="expirationDate" formControlName="expirationDate" class="form-control" placeholder="Son Kullanma" required/>
+                </div>
+                <div class="col-4">
+                    <span>CVV:</span> 
+                    <input type="text" id="cvc" formControlName="cvc" class="form-control" placeholder="CVV" required/>
+                </div>
+
+                <div class="col-8">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="right border">
+
+            <app-cart-detail></app-cart-detail>
+
+          </div>
+
+          <div class="col-md-10" style="text-align:right">
+            <button data-bs-dismiss="modal" type="button" class="btn btn-primary" 
+            style="border-radius: 50px; width: 150px;"  (click)="add()" >
+              Ödeme Yap
+            </button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

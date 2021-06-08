@@ -1,0 +1,13 @@
+.navbar-nav > li{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+
+.label-warning {
+  background-color: #FFA500;
+  color: black;
+  font-weight: bold;
+  padding: 2px;
+}
+

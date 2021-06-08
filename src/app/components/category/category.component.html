@@ -1,0 +1,21 @@
+<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+  <div class="rounded-0 mt-4" style="width: 170px;">
+    <ul class="list-group">
+      <li class="list-group-item sidebar-title bg-dark h5">Kategoriler</li>
+      <div style="width: 170px;">
+      <li
+        (click)="setCurrentCategory(category)"
+        routerLink="/books/category/{{category.categoryId}}"
+        *ngFor="let category of categories"
+        [class]="getCurrentCategoryClass(category)">
+        {{ category.categoryName }}
+      </li>
+    </div>
+    </ul>
+  
+  </div>
+  </div>
+
+
+
