@@ -6,7 +6,7 @@ import { AuthorService } from 'src/app/services/author.service';
   selector: 'app-author',
   templateUrl: './author.component.html',
   styleUrls: ['./author.component.css']
-})
+})   
 export class AuthorComponent implements OnInit {
 
   authors:Author[]=[];
