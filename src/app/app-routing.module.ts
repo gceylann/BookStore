@@ -45,8 +45,8 @@ const routes: Routes = [
   
   {path: "login", component:LoginComponent},
   {path: "register", component:RegisterComponent},
-  {path: "updatepassword", component:UserPasswordUpdateComponent},
-  {path: "updateinfos", component:UserInfosUpdateComponent},
+  {path: "updatepassword", component:UserPasswordUpdateComponent, canActivate: [LoginGuard]},
+  {path: "updateinfos", component:UserInfosUpdateComponent, canActivate: [LoginGuard]},
 
   {path: 'payments', component: PaymentComponent },
   {path: 'cart', component: CartDetailComponent },
