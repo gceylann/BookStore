@@ -23,7 +23,7 @@ import { BookDetailComponent } from './components/book-detail/book-detail.compon
 import { UserInfosUpdateComponent } from './components/user-infos-update/user-infos-update.component';
 
 
-const routes: Routes = [
+const routes: Routes = [   
   {path:"",pathMatch:"full",component:BookComponent},
   {path:"books",component:BookComponent},
   {path:"books/bookdetail/:bookId",component:BookDetailComponent},
