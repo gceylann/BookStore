@@ -1,27 +1,20 @@
-# BookStore
+# Book Store Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
-## Development server
+## Front-End
+Projenin frontend kısmında Angular 11 kullanıldı. Duyarlı bir tasarım elde etmek için Bootstrap entegre edilmiştir.
+Angular'da modül olarak BrowserModule, HttpClientModule, AppRoutingModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule ve ToastrModule kullanıldı.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/2.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/1.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/3.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/4.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/5.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/6.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/7.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/8.png)
+![resim](https://github.com/gceylann/BookStoreProject-Backend/blob/master/WebAPI/wwwroot/Images/frontend/9.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
